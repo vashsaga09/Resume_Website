@@ -1,0 +1,175 @@
+:root {
+    --mainTextColor-light: #000;
+    --secondaryTextColor-light: (51, 51, 51);
+    --mainLinkColor-light: #0da2b8;
+    --mainBorderColor-light: rgb(218, 218, 218);
+    --mainBgColor-light: rgb(249, 250,251);
+
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #adb0b1;
+    --mainLinkColor-dark: rgb(30, 190, 214);
+    --mainBorderColor-dark: #2b3031;
+    --mainBgColor-dark: #131415;
+
+    --mainTextColor: var(--mainTextColor-dark);
+    --secondaryTextColor: var(--secondaryTextColor-dark);
+    --mainLinkColor: var(--mainLinkColor-dark);
+    --mainBorderColor: var(--mainBorderColor-dark);
+    --mainBgColor: var(--mainBgColor-dark);
+}
+
+
+*{
+    font-family: Aptos, sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor)
+}
+
+body {
+background-color: var(--mainBgColor);
+}
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-size: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+#container_main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section_page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper_main {
+    display: flex;
+    align-items: center;
+    gap:  4em;
+   
+}
+
+#user_name {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+#bio, a {
+    font-weight: 300;
+}
+
+#profile_pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#email {
+    color:var(--mainTextColor)
+}
+
+#socials_list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#socials_list a {
+    font-size: 1em;
+    color: var(--secondaryTextColor);
+    transition: 0.4s;
+}
+
+#socials_list a:hover {
+    color: var(--mainLinkColor)
+}
+
+#qualifications_list {
+    list-style: none;
+}
+
+#work_experience_list {
+    list-style: none;
+}
+
+#wrapper_skills_list_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+
+}
+
+.card_skills {
+    border: 1px solid var(--mainBorderColor);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.card_work_experience {
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+
+}
+
+.line_break {
+    background-color: var(--mainBorderColor);
+    height: 1px;
+}
+
+.card_projects {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid  var(--mainBorderColor);
+}
+
+.card_projects a {
+    color:var(--mainTextColor);
+    transition: 0.4s;
+
+}
+
+.card_projects a:hover {
+    color: var(--mainLinkColor);
+}
+
+@media (max-width: 600px) {
+    .wrapper_main {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #profile_picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section_page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+    }
+
+    .card_work_experience {
+        border-left: none;
+        padding-left: 0;
+    }
+
+}
